@@ -14,6 +14,167 @@ body {
     height: 100vh;
 }
 
+#startDiv {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #2c2f4a;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+#startDiv h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+
+#startDiv p {
+  font-size: 15px;
+  color: #cfd8ff;
+  line-height: 1.5;
+}
+
+
+#startBtn {
+  margin-top: 20px;
+  padding: 12px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #5c6bc0, #3949ab);
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#startBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(92, 107, 192, 0.4);
+}
+
+
+
+/* ADMIN */
+#openAdminBtn {
+  position: fixed;        /* stays at top even when scrolling */
+  top: 15px;              /* distance from top */
+  right: 15px;            /* distance from right */
+  z-index: 1000;          /* stays above other elements */
+
+  padding: 10px 18px;
+  background: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#openAdminBtn:hover {
+  background: #1565c0;
+  transform: scale(1.05);
+}
+
+
+
+#adminPanel {
+  position: fixed;                 /* take it out of normal layout */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* perfect centering */
+  z-index: 1001;
+
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  background: #2c2f4a;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+#adminPanel h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+#adminPanel input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+
+  background: #1e2235;
+  color: #ffffff;
+
+  border: 1px solid #3f4572;
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+#adminPanel input::placeholder {
+  color: #b0b6ff;
+}
+
+#adminPanel input:focus {
+  outline: none;
+  border-color: #5c6bc0;
+  box-shadow: 0 0 0 2px rgba(92, 107, 192, 0.3);
+}
+
+#closeAdminBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+#saveQuestionBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  background: linear-gradient(135deg, #5c6bc0, #3949ab);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 25px;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#saveQuestionBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(92, 107, 192, 0.4);
+}
+
+
+
 #quize-box {
     background: #2a2a40;
     padding: 3px;
@@ -22,6 +183,7 @@ body {
     max-width: 500px;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    display: none;
 }
 
 #timer {
@@ -41,15 +203,54 @@ body {
     margin-bottom: 20px;
 }
 
+
+
 #next-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    background: #4b6cb7;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
+  display: none;
+  margin-top: 15px;
+  padding: 10px 28px;
+  font-size: 15px;
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+#next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(67, 160, 71, 0.4);
+}
+
+
+
+#result button {
+  margin-top: 15px;
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #f57c00, #ef6c00);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#result button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(245, 124, 0, 0.4);
+}
+
+
 
 .option-btn {
     background: #38385e;
@@ -60,6 +261,7 @@ body {
     cursor: pointer;
     transition: background 0.3s ease;
 }
+
 
 .option-btn:hover {
     background: #4b4b7e;
