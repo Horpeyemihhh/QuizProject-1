@@ -7,12 +7,49 @@
     <script defer src ="index.js"></script>
 </head>
 <body>
+ 
+  <!-- START DIV -->
+  <div id="startDiv">
+    <h1>Welcome to the Quiz!</h1>
+    <p>Test your knowledge and challenge yourself. Click Start to begin.</p>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+  
+  
+   <!-- QUIZ BOX -->
   <div id="quize-box">
-      <div id="timer">⏱️15</div>
-      <h2 id="question">Loading...</h2>
-      <div id="options" class="options"></div>
-      <button id="next-btn">Next Question</button>
+      <div id="qAndO-Div">
+         <div id="timer">⏱️15</div>
+         <h2 id="question">Loading...</h2>
+         <div id="options" class="options"></div>
+         <button id="next-btn">Next Question</button>
+      </div>
+      
       <div id="result" class="result"></div>
   </div>  
+ 
+ 
+  <!-- ADMIN BUTTON -->
+  <button id="openAdminBtn">➕ Add Question</button>
+
+  <!-- ADMIN PANEL -->
+  <div id="adminPanel" style="display:none;">
+    <button id="closeAdminBtn">✕</button>
+    
+    <h2>Add New Question</h2>
+
+    <input type="text" id="newQuestion" placeholder="Enter question" />
+
+    <input type="text" class="optInput" placeholder="Option A" />
+    <input type="text" class="optInput" placeholder="Option B" />
+    <input type="text" class="optInput" placeholder="Option C" />
+    <input type="text" class="optInput" placeholder="Option D" />
+
+    <input type="text" id="correctAnswerInput" placeholder="Correct answer (must match option)" />
+
+    <button id="saveQuestionBtn">Save Question</button>
+
+  </div>
+   
 </body>
 </html>
