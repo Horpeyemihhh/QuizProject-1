@@ -82,6 +82,11 @@ const qAndO = document.getElementById("qAndO-Div")
 
 
 function startFunc() {
+  let QUESTION_TIME = 15; // seconds per question
+
+  document.getElementById("totalQuestions").textContent = quizData.length;
+  document.getElementById("timePerQuestion").textContent = QUESTION_TIME;
+  
   let startBtnElem = document.getElementById("startBtn");
 
   startBtnElem.addEventListener("click", () => {
@@ -111,7 +116,8 @@ function startQuiz() {
 
 function loadQuestion() {
     clearInterval(timer);
-    timeLeft = 15;
+    let QUESTION_TIME = 15;
+    timeLeft = QUESTION_TIME;
     updateTimer();
     timer = setInterval(countdown, 1000);
     
