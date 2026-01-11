@@ -34,10 +34,11 @@ body {
 }
 
 
-#startDiv p {
-  font-size: 15px;
+.instructions {
+  font-size: 14px;
   color: #cfd8ff;
-  line-height: 1.5;
+  margin: 15px 0 25px;
+  line-height: 1.6;
 }
 
 
